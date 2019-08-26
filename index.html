@@ -91,6 +91,12 @@
     console.log(error);
   });   
               </script>-->
+
+              <script> 
+                  fetch('https://api.github.com/users')
+    .then(res => res.json())//response type
+    .then(data => console.log(data));
+    </script>
             Coming soon...
           </p>
         </div>
