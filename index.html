@@ -73,7 +73,7 @@
 
   const ul = document.getElementById('presence');
   const url = 'https://api.thedrop.me/presences/293828021134295040';
-  fetch(url)
+  fetch(url, {mode: 'cors'})
   .then((resp) => resp.json())
   .then(function(data) {
     let authors = data.results;
