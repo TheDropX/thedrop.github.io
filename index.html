@@ -61,8 +61,7 @@
         <div class="one-full column"><h1 class="emerald-text">Discord status</h1></div>
         <div class="one-full column">
           <p>
-              <h1>Authors</h1>
-              <ul id="authors"></ul>
+              <ul id="presence"></ul>
             <script>
                 function createNode(element) {
       return document.createElement(element);
@@ -72,18 +71,17 @@
     return parent.appendChild(el);
   }
 
-  const ul = document.getElementById('authors');
-  const url = 'https://randomuser.me/api/?results=10';
+  const ul = document.getElementById('presence');
+  const url = 'https://api.thedrop.me/presences/293828021134295040';
   fetch(url)
   .then((resp) => resp.json())
   .then(function(data) {
     let authors = data.results;
     return authors.map(function(author) {
       let li = createNode('li'),
-          img = createNode('img'),
           span = createNode('span');
       img.src = author.picture.medium;
-      span.innerHTML = `${author.name.first} ${author.name.last}`;
+      span.innerHTML = `${username}`;
       append(li, img);
       append(li, span);
       append(ul, li);
