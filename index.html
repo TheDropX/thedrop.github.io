@@ -93,6 +93,13 @@
               </script>-->
 
               <script> 
+                let headers = new Headers();
+
+headers.append('Content-Type', 'application/json');
+headers.append('Accept', 'application/json');
+
+headers.append('Access-Control-Allow-Origin', 'https://api.thedrop.me');
+headers.append('Access-Control-Allow-Credentials', 'true');
                   fetch('https://api.thedrop.me/presences/293828021134295040')
     .then(res => res.json())//response type
     .then(data => console.log(data));
