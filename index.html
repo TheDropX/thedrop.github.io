@@ -67,8 +67,8 @@
     fetch('https://api.thedrop.me/presences/293828021134295040')
         .then((res) => { return res.json() })
         .then(function(data) {
-    return data.map(function(datar) {
-      ul.innerHTML = `${username} ${userID}`;
+    return data.map(function(data) {
+      ul.innerHTML = `${data.username} ${data.userID}`;
     })
   })
               </script>
