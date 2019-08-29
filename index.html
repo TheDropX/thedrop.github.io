@@ -60,37 +60,28 @@
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Discord status</h1></div>
         <div class="one-full column">
-          <p><!--
+          <p><
               <ul id="presence"></ul>
             <script>
-                function createNode(element) {
-      return document.createElement(element);
-  }
-
-  function append(parent, el) {
-    return parent.appendChild(el);
-  }
-
-  const ul = document.getElementById('presence');
-  const url = 'https://api.thedrop.me/presences/293828021134295040';
-  fetch(url, {mode: 'no-cors'})
-  .then((resp) => resp.json())
-  .then(function(data) {
-    let authors = data.results;
-    return authors.map(function(author) {
-      let li = createNode('li'),
-          span = createNode('span');
-      img.src = author.picture.medium;
-      span.innerHTML = `${username}`;
-      append(li, img);
-      append(li, span);
-      append(ul, li);
-    })
-  })
-  .catch(function(error) {
-    console.log(error);
-  });   
-              </script>-->
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((res) => { return res.json() })
+        .then((data) => {
+            let result = `<h2> Random User Info From Jsonplaceholder API</h2>`;
+            data.forEach((user) => {
+                const { id, name, email, address: { city, street } } = user
+                result +=
+                    `<div>
+                     <h5> User ID: ${id} </h5>
+                         <ul class="w3-ul">
+                             <li> User Full Name : ${name}</li>
+                             <li> User Email : ${email} </li>
+                             <li> User Address : ${city}, ${street} </li>
+                         </ul>
+                      </div>`;
+                        document.getElementById('result').innerHTML = result;
+                    });
+                })
+              </script>
 
               <script> 
                 let headers = new Headers();
