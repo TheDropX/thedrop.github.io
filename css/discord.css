@@ -1,0 +1,225 @@
+.discord-usercard {
+    margin: 1em 0;
+    border-radius: 8px;
+    position: relative;
+    width: 550px;
+    background: #7289da
+}
+
+.discord-usercard * {
+    margin: 0;
+    padding: 0
+}
+
+.discord-usercard .usercard__header {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.discord-usercard .usercard__header .header__avatar {
+    margin-right: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-clip: padding-box;
+    background-color: none;
+    background-position: 50%;
+    background-size: 100%
+}
+
+.discord-usercard .usercard__header .header__info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+
+.discord-usercard .usercard__header .header__info .info__nameTag {
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 20px;
+    line-height: 20px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box
+}
+
+.discord-usercard .usercard__header .header__info .info__nameTag span.username {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff
+}
+
+.discord-usercard .usercard__header .header__info .info__nameTag span.discriminator {
+    font-size: 14px;
+    color: hsla(0,0%,100%,.6)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges {
+    margin-top: 8px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper {
+    outline: 0;
+    margin-right: 6px
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    cursor: pointer;
+    width: 24px;
+    height: 24px
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_hypesquad {
+    background-image: url(https://premid.app/img/hypesquad.3a050fcc.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_nitro {
+    background-image: url(https://premid.app/img/nitro.379d2b31.svg);
+    width: 28px
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_early {
+    background-image: url(https://premid.app/img/early.22173ff0.svg);
+    width: 28px
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_bravery {
+    background-image: url(https://premid.app/img/bravery.1115767a.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_brilliance {
+    background-image: url('https://discordapp.com/assets/d3478c6bd5cee0fc600e55935ddc81aa.svg')
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_balance {
+    background-image: url(https://premid.app/img/balance.2a085ed9.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_boost-lvl1 {
+    background-image: url(https://premid.app/img/boost-lvl1.b7468f52.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_boost-lvl2 {
+    background-image: url(https://premid.app/img/boost-lvl2.ffa25a43.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_boost-lvl3 {
+    background-image: url(https://premid.app/img/boost-lvl3.6ae89afb.svg)
+}
+
+.discord-usercard .usercard__header .header__info .info__badges .badge-wrapper .badge_boost-lvl4 {
+    background-image: url(https://premid.app/img/boost-lvl4.6a6364c9.svg)
+}
+
+.discord-usercard .usercard__activity {
+    background-color: rgba(0,0,0,.05)
+}
+
+.discord-usercard .usercard__activity .activity__info {
+    padding: 20px
+}
+
+.discord-usercard .usercard__activity .activity__info .info__header {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__icon {
+    position: relative
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__icon img.game {
+    text-indent: -9999px;
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-user-drag: none;
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__icon img.status-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    -webkit-user-drag: none
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    color: hsla(0,0%,100%,.8);
+    margin-left: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__title {
+    font-weight: 600
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__title span {
+    color: hsla(0,0%,100%,.8)
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__title span:hover {
+    text-decoration: underline
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content .text-row {
+    display: block;
+    margin-bottom: 4px
+}
+
+.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__nd-line,.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__st-line {
+    color: hsla(0,0%,100%,.8)
+}

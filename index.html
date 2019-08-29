@@ -7,6 +7,7 @@
 
     <link href="https://modesta.alexflipnote.dev/css/modesta.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/discord.css" type="text/css" rel="stylesheet">
 
     <script src="js/smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a7e58d64e4.js"></script>
@@ -60,16 +61,52 @@
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Discord status</h1></div>
         <div class="one-full column">
+            <div class="discord-usercard">
+                <div  class="usercard__header">
+                  <div  class="header__avatar" style="background-image: url(&quot;https://cdn.discordapp.com/avatars/293828021134295040/895232b24cdccad9b00a035f5e5eeee9.png?size=2048&quot;);"></div>
+                  <div  class="header__info">
+                    <div  class="info__nameTag">
+                      <span  class="username"><?php echo $row['Username']; ?></span><span  class="discriminator"><?php echo $row['UserTag']; ?></span></div>
+                      <div  class="info__badges">
+                        <div  class="badge-wrapper">
+                          <div  class="badge badge_brilliance"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                          <div  class="usercard__activity">
+                            <div  class="activity__info">
+                              <div  class="info__header">Playing a game</div>
+                              <div  class="info__game">
+                                <div  class="game__icon">
+                                  <?php if($row['largeImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['largeImage'] . '.png" class="game">'; } ?>
+                                  <?php if($row['smallImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['smallImage'] . '.png" class="status-icon">'; } ?>
+                                </div>
+                                <div  class="game__content"><div  class="game__title text-row"><span ><?php echo $row['Game']; ?></span></div><div  class="game__st-line text-row"><?php echo $row['Details']; ?></div>
+                                <div  class="game__nd-line text-row"><?php echo $row['State']; ?></div>
+                                <div  class="game__time text-row">-</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+            <?php } ?>
+            </div>
+            
           <p id="presence">
             <script>
+
               const ul = document.getElementById('presence');
-    fetch('https://api.thedrop.me/presences/293828021134295040')
-        .then((res) => { return res.json() })
-        .then(function(data) {
-    return data.map(function(data) {
-      ul.innerHTML = `${data.username} ${data.userID}`;
-    })
-  })
+
+              fetch('https://api.thedrop.me/presences/293828021134295040')
+                  .then((res) => { return res.json() })
+                  .then(function(data) {
+              return data.map(function(data) {
+                ul.innerHTML = `${data.username} ${data.userID}`;
+              })
+            })
+
               </script>
             Loading...
           </p>
