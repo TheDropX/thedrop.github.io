@@ -79,13 +79,13 @@
                               <div  class="info__header">Playing a game</div>
                               <div  class="info__game">
                                 <div  class="game__icon">
-                                  <p id="game"></p>
-                                  <p id="state"></p>
+                                  <img id="largeImage">
+                                  <img id="smallImage">
                                   <?php if($row['largeImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['largeImage'] . '.png" class="game">'; } ?>
                                   <?php if($row['smallImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['smallImage'] . '.png" class="status-icon">'; } ?>
                                 </div>
-                                <div  class="game__content"><div  class="game__title text-row"><span ><?php echo $row['Game']; ?></span></div><div  class="game__st-line text-row"><?php echo $row['Details']; ?></div>
-                                <div  class="game__nd-line text-row"><?php echo $row['State']; ?></div>
+                                <div  class="game__content"><div  class="game__title text-row"><span id="game"></span></div><div  class="game__st-line text-row"><span id="details"></span></div>
+                                <div  class="game__nd-line text-row"><p id="state"></p></div>
                                 <div  class="game__time text-row">-</div>
                               </div>
                             </div>
@@ -102,7 +102,7 @@
               const ul = document.getElementById('presence');
               const username = document.getElementById('username');
               const game = document.getElementById('game');
-              const state = document.getElementById('state');
+              const details = document.getElementById('details');
 
               fetch('https://api.thedrop.me/presences/293828021134295040')
                   .then((res) => { return res.json() })
@@ -111,7 +111,7 @@
 
                 username.innerHTML = `${data.userTag}`;
                 game.innerHTML = `${data.game}`;
-                state.innerHTML = `${data.state}`;
+                state.innerHTML = `${data.details}`;
 
               })
             })
