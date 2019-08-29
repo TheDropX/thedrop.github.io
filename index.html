@@ -65,18 +65,11 @@
             <script>
     fetch('https://api.thedrop.me/presences/293828021134295040')
         .then((res) => { return res.json() })
-        .then((data) => {
-          let result = "a";
-            data.forEach((user) => {
-              const { userID, username } = user
-                result +=
-                    `<div>
-                         <ul class="w3-ul">
-                             <li> aasd: ${username} ${userID}</li>
-                         </ul>
-                      </div>`;
-                    });
-                })
+        .then(function(data) {
+    return data.map(function(datar) {
+      ul.innerHTML = `${username} ${userID}`;
+    })
+  })
               </script>
             Coming soon...
           </p>
