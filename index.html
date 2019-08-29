@@ -67,11 +67,11 @@
         .then((res) => { return res.json() })
         .then((data) => {
             data.forEach((user) => {
-              const result = "";
+              const { userID, username } = user
                 result +=
                     `<div>
                          <ul class="w3-ul">
-                             <li> aasd: ${username}</li>
+                             <li> aasd: ${username} ${userID}</li>
                          </ul>
                       </div>`;
                     });
