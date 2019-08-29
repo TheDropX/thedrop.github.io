@@ -63,13 +63,13 @@
         <div class="one-full column">
             <div class="discord-usercard">
                 <div  class="usercard__header">
-                  <div  class="header__avatar" style="background-image: url('https://cdn.discordapp.com/avatars/293828021134295040/f2d63c90ab2d4705d1f12847d7198035.png?size=2048');"></div>
-                  <div  class="header__info">
-                    <div  class="info__nameTag">
-                      <span  class="username"><?php echo $row['Username']; ?></span><span  class="discriminator"><?php echo $row['UserTag']; ?></span></div>
-                      <div  class="info__badges">
-                        <div  class="badge-wrapper">
-                          <div  class="badge badge_brilliance"></div>
+                  <div class="header__avatar" style="background-image: url('https://cdn.discordapp.com/avatars/293828021134295040/f2d63c90ab2d4705d1f12847d7198035.png?size=2048');"></div>
+                  <div class="header__info">
+                    <div class="info__nameTag">
+                      <span class="username"><p id="username">Loading...</p></span> <span class="discriminator"><p id="discriminator">Loading...</p></span></div>
+                      <div class="info__badges">
+                        <div class="badge-wrapper">
+                          <div class="badge badge_brilliance"></div>
                         </div>
                       </div>
                     </div>
@@ -98,12 +98,17 @@
             <script>
 
               const ul = document.getElementById('presence');
+              const username = document.getElementById('username');
+              const discriminator = document.getElementById('discriminator');
 
               fetch('https://api.thedrop.me/presences/293828021134295040')
                   .then((res) => { return res.json() })
                   .then(function(data) {
               return data.map(function(data) {
-                ul.innerHTML = `${data.username} ${data.userID}`;
+
+                username.innerHTML = `${data.username}`;
+                discriminator.innerHTML = `${data.discriminator}`;
+
               })
             })
 
