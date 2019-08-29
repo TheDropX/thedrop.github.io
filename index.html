@@ -63,7 +63,7 @@
           <p>
               <ul id="presence"></ul>
             <script>
-    fetch('api.thedrop.me/presences/293828021134295040')
+    fetch('https://api.thedrop.me/presences/293828021134295040')
         .then((res) => { return res.json() })
         .then((data) => {
             data.forEach((user) => {
@@ -71,7 +71,7 @@
                 result +=
                     `<div>
                          <ul class="w3-ul">
-                             <li> User Full Name : ${username}</li>
+                             <li> aasd: ${username}</li>
                          </ul>
                       </div>`;
                     });
@@ -83,7 +83,7 @@
 headers.append('Content-Type', 'application/json');
 headers.append('Accept', 'application/json');
 
-headers.append('Access-Control-Allow-Origin', 'https://thedrop.me');
+headers.append('Access-Control-Allow-Origin', 'thedrop.me');
 headers.append('Access-Control-Allow-Credentials', 'true');
 
     </script> 
