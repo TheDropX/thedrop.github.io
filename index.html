@@ -61,12 +61,14 @@
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Discord status</h1></div>
         <div class="one-full column">
+
             <div class="discord-usercard">
                 <div  class="usercard__header">
                   <div class="header__avatar" style="background-image: url('https://cdn.discordapp.com/avatars/293828021134295040/f2d63c90ab2d4705d1f12847d7198035.png?size=2048');"></div>
                   <div class="header__info">
                     <div class="info__nameTag">
-                      <span class="username"><p id="username">Loading...</p></span></div>
+                      <span class="username" id="username"></span>
+                    </div>
                       <div class="info__badges">
                         <div class="badge-wrapper">
                           <div class="badge badge_brilliance"></div>
@@ -98,11 +100,10 @@
                           </div>
                         </div>
                       </div>
-            
-            <?php } ?>
             </div>
             
           <p id="presence">
+
             <script>
 
               const ul = document.getElementById('presence');
