@@ -128,7 +128,16 @@
                   state.innerHTML = `${data.state}`;
 
                   largeImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.largeImage}.png`;
-                  smallImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.smallImage}.png`;
+
+                  if(data.smallImage != null) {
+
+                    smallImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.smallImage}.png`;
+
+                  } else {
+
+                    smallImage.remove();
+
+                  }
 
                 } else {
 
@@ -137,6 +146,7 @@
                   state.innerHTML = `-`;
 
                   largeImage.src = "https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg";
+                  smallImage.remove();
 
                 }
 
