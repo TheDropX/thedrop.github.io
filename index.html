@@ -79,6 +79,8 @@
                               <div  class="info__header">Playing a game</div>
                               <div  class="info__game">
                                 <div  class="game__icon">
+                                  <p id="game"></p>
+                                  <p id="status"></p>
                                   <?php if($row['largeImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['largeImage'] . '.png" class="game">'; } ?>
                                   <?php if($row['smallImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['smallImage'] . '.png" class="status-icon">'; } ?>
                                 </div>
@@ -99,6 +101,8 @@
 
               const ul = document.getElementById('presence');
               const username = document.getElementById('username');
+              const game = document.getElementById('game');
+              const state = document.getElementById('state');
 
               fetch('https://api.thedrop.me/presences/293828021134295040')
                   .then((res) => { return res.json() })
@@ -106,6 +110,8 @@
               return data.map(function(data) {
 
                 username.innerHTML = `${data.userTag}`;
+                game.innerHTML = `${data.game}`;
+                state.innerHTML = `${data.state}`;
 
               })
             })
