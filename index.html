@@ -120,12 +120,23 @@
               return data.map(function(data) {
 
                 username.innerHTML = `${data.userTag}`;
-                game.innerHTML = `${data.game}`;
-                details.innerHTML = `${data.details}`;
-                state.innerHTML = `${data.state}`;
 
-                largeImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.largeImage}.png`;
-                smallImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.smallImage}.png`;
+                if(data.game != null) {
+
+                  game.innerHTML = `${data.game}`;
+                  details.innerHTML = `${data.details}`;
+                  state.innerHTML = `${data.state}`;
+
+                  largeImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.largeImage}.png`;
+                  smallImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.smallImage}.png`;
+
+                } else {
+
+                  game.innerHTML = `No game detected.`;
+                  details.innerHTML = `-`;
+                  state.innerHTML = `-`;
+
+                }
 
               })
             })
