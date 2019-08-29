@@ -80,7 +80,7 @@
                               <div  class="info__game">
                                 <div  class="game__icon">
                                   <img class="game" id="largeImage">
-                                  <img  class="status-icon" id="smallImage">
+                                  <img class="status-icon" id="smallImage">
                                   <?php if($row['largeImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['largeImage'] . '.png" class="game">'; } ?>
                                   <?php if($row['smallImage'] != 'null') { echo '<img  src="https://cdn.discordapp.com/app-assets/' . $row['applicationID'] . '/' . $row['smallImage'] . '.png" class="status-icon">'; } ?>
                                 </div>
@@ -104,6 +104,9 @@
               const game = document.getElementById('game');
               const details = document.getElementById('details');
 
+              const largeImage = document.getElementById('largeImage');
+              const smallImage = document.getElementById('smallImage');
+
               fetch('https://api.thedrop.me/presences/293828021134295040')
                   .then((res) => { return res.json() })
                   .then(function(data) {
@@ -113,11 +116,13 @@
                 game.innerHTML = `${data.game}`;
                 state.innerHTML = `${data.details}`;
 
+                largeImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.largeImage}.png`;
+                smallImage.src = `https://cdn.discordapp.com/app-assets/${data.applicationID}/${data.smallImage}.png`;
+
               })
             })
 
               </script>
-            Loading...
           </p>
         </div>
       </div>
