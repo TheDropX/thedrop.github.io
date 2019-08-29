@@ -63,22 +63,17 @@
           <p>
               <ul id="presence"></ul>
             <script>
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://api.thedrop.me/presences/293828021134295040')
         .then((res) => { return res.json() })
         .then((data) => {
-            let result = `<h2> Random User Info From Jsonplaceholder API</h2>`;
             data.forEach((user) => {
                 const { id, name, email, address: { city, street } } = user
                 result +=
                     `<div>
-                     <h5> User ID: ${id} </h5>
                          <ul class="w3-ul">
-                             <li> User Full Name : ${name}</li>
-                             <li> User Email : ${email} </li>
-                             <li> User Address : ${city}, ${street} </li>
+                             <li> User Full Name : ${username}</li>
                          </ul>
                       </div>`;
-                        document.getElementById('presence').innerHTML = result;
                     });
                 })
               </script>
