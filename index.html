@@ -67,7 +67,6 @@
         .then((res) => { return res.json() })
         .then((data) => {
             data.forEach((user) => {
-                const { id, name, email, address: { city, street } } = user
                 result +=
                     `<div>
                          <ul class="w3-ul">
