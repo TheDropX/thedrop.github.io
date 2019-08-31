@@ -174,11 +174,11 @@
     height: 90px;
     border-radius: 4px;
     display: block;
+    -webkit-mask: url("../img/mask.svg");
+    mask: url("../img/mask.svg");
     -o-object-fit: cover;
     object-fit: cover;
     -webkit-user-drag: none;
-    -webkit-mask: url("../img/mask.svg");
-    mask: url("../img/mask.svg");
 }
 
 .discord-usercard .usercard__activity .activity__info .info__game .game__icon img.status-icon {
