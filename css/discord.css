@@ -177,6 +177,7 @@
     -o-object-fit: cover;
     object-fit: cover;
     -webkit-user-drag: none;
+    mask: url("../img/mask.svg");
 }
 
 .discord-usercard .usercard__activity .activity__info .info__game .game__icon img.status-icon {
