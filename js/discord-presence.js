@@ -39,6 +39,7 @@ return data.map(function(data) {
     state.innerHTML = `-`;
 
     largeImage.src = "https://discordapp.com/assets/1c8a54f25d101bdc607cec7228247a9a.svg";
+    largeImage.style = "";
     smallImage.remove();
 
   }
