@@ -51,43 +51,8 @@
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Projects:</h1></div>
         <div class="one-full column">
-            <p id="repos">
-
-                <script>
-
-                function createNode(element) {
-                      return document.createElement(element);
-                  }
-
-                  function append(parent, el) {
-                    return parent.appendChild(el);
-                  }
-
-                  const repos = document.getElementById('repos');
-                  const url = 'https://api.github.com/users/TheDropX/repos';
-                  fetch(url)
-                  .then((resp) => resp.json())
-                  .then(function(data) {
-                    let authors = data.full_name;
-                    return authors.map(function(author) {
-                      let li = createNode('li'),
-                          img = createNode('img'),
-                          span = createNode('span');
-                      img.src = author.picture.medium;
-                      span.innerHTML = `${author.name.first} ${author.name.last}`;
-                      append(li, img);
-                      append(li, span);
-                      append(repos, li);
-                    })
-                  })
-                  .catch(function(error) {
-                    console.log(error);
-                  });   
-    
-                </script>
-              </p>
           <p><a href="https://github.com/TheDropX/Presences" target="_blank">TheDropX/Presences</a></p>
-            <p><a href="https://github.com/TheDropX/API" target="_blank">TheDropX/API</a></p>
+          <p><a href="https://github.com/TheDropX/API" target="_blank">TheDropX/API</a></p>
         </div>
       </div>
     </section>
