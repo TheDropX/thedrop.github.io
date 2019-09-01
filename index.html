@@ -51,6 +51,26 @@
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Projects:</h1></div>
         <div class="one-full column">
+            <p id="repos">
+
+                <script>
+    
+                  const repos = document.getElementById('repos');
+    
+                  fetch('https://api.github.com/users/TheDropX/repos')
+                      .then((res) => { return res.json() })
+                      .then(function(data) {
+                  return data.map(function(data) {
+    
+                    array.forEach(element => {
+                      repos.innerHTML += element.full_name;
+                    });
+    
+                  })
+                })
+    
+                </script>
+              </p>
           <p><a href="https://github.com/TheDropX/Presences" target="_blank">TheDropX/Presences</a></p>
             <p><a href="https://github.com/TheDropX/API" target="_blank">TheDropX/API</a></p>
         </div>
