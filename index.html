@@ -61,10 +61,10 @@
                       .then((res) => { return res.json() })
                       .then(function(data) {
                   return data.map(function(data) {
-                    
-                    data.full_name.forEach(element => {
-                      repos.innerHTML += element.full_name;
-                    });
+    
+                    for(var i=0; i <= data.length; i++) {
+                    repos.innerHTML += data.full_name;
+                    }
     
                   })
                 })
