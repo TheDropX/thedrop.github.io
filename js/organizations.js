@@ -13,21 +13,25 @@ function append(parent, el) {
         var div = document.createElement('div');
         var org_name = document.createElement('p');
         var org_img = document.createElement('img');
+        var org_desc = document.createElement('p');
 
         div.classList.add("organization-tab");
 
         org_name.classList.add("organization-name");
+        org_desc.classList.add("organization-description");
+
         org_img.classList.add("header__avatar");
         org_img.classList.add("organization-image");
         org_img.src = data.avatar_url;
 
         org_name.innerHTML += data.login;
-        org_img.src = data.avatar_url;
+        org_desc.innerHTML += data.description;
 
         append(orgdivs, div);
 
         append(div, org_img);
         append(div, org_name);
+        append(div, org_desc);
 
       })
 
