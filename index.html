@@ -54,6 +54,14 @@
             <p id="repos">
 
                 <script>
+
+                  function createNode(element) {
+                    return document.createElement(element);
+                  }
+
+                  function append(parent, el) {
+                    return parent.appendChild(el);
+                  }
     
                   const repos = document.getElementById('repos');
     
@@ -61,8 +69,10 @@
                       .then((res) => { return res.json() })
                       .then(function(data) {
                   return data.map(function(data) {
-    
-                    repos.innerHTML += data.full_name.join(" ");
+                    
+                    let p = createNode('p');
+
+                    p.innerHTML += data.full_name;
     
                   })
                 })
