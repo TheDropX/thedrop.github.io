@@ -55,27 +55,34 @@
 
                 <script>
 
-                  function createNode(element) {
-                    return document.createElement(element);
+                function createNode(element) {
+                      return document.createElement(element);
                   }
 
                   function append(parent, el) {
                     return parent.appendChild(el);
                   }
-    
-                  const repos = document.getElementById('repos');
-    
-                  fetch('https://api.github.com/users/TheDropX/repos')
-                      .then((res) => { return res.json() })
-                      .then(function(data) {
-                  return data.map(function(data) {
 
-                    let p = createNode('p');
-
-                    p.innerHTML = data.full_name;
-    
+                  const ul = document.getElementById('repos');
+                  const url = 'https://api.github.com/users/TheDropX/repos';
+                  fetch(url)
+                  .then((resp) => resp.json())
+                  .then(function(data) {
+                    let authors = data.results;
+                    return authors.map(function(author) {
+                      let li = createNode('li'),
+                          img = createNode('img'),
+                          span = createNode('span');
+                      img.src = author.picture.medium;
+                      span.innerHTML = `${author.name.first} ${author.name.last}`;
+                      append(li, img);
+                      append(li, span);
+                      append(ul, li);
+                    })
                   })
-                })
+                  .catch(function(error) {
+                    console.log(error);
+                  });   
     
                 </script>
               </p>
