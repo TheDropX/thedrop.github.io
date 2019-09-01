@@ -68,7 +68,7 @@
                   fetch(url)
                   .then((resp) => resp.json())
                   .then(function(data) {
-                    let authors = data.results;
+                    let authors = data.full_name;
                     return authors.map(function(author) {
                       let li = createNode('li'),
                           img = createNode('img'),
