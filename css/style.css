@@ -11,9 +11,18 @@
     box-shadow: 0 4px 16px 0 rgba(46,204,113,0.2); 
     padding: 10px; 
     float: left; 
+    position: relative;
+    top: 0px;
+    transition: top ease 0.5s;
     justify-content: space-around; 
     margin-left: 30px; 
     border: 1px solid #2ecc71;
+
+}
+
+.organization-tab:hover {
+
+    top: -10px;
 
 }
 
