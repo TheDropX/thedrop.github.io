@@ -63,7 +63,7 @@
                     return parent.appendChild(el);
                   }
 
-                  const ul = document.getElementById('repos');
+                  const repos = document.getElementById('repos');
                   const url = 'https://api.github.com/users/TheDropX/repos';
                   fetch(url)
                   .then((resp) => resp.json())
@@ -77,7 +77,7 @@
                       span.innerHTML = `${author.name.first} ${author.name.last}`;
                       append(li, img);
                       append(li, span);
-                      append(ul, li);
+                      append(repos, li);
                     })
                   })
                   .catch(function(error) {
