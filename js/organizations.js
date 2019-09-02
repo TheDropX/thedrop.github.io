@@ -16,6 +16,7 @@ function append(parent, el) {
         var org_desc = document.createElement('p');
 
         div.classList.add("organization-tab");
+        div.classList.add("gradient-border");
 
         org_name.classList.add("organization-name");
         org_desc.classList.add("organization-description");
