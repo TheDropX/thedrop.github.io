@@ -19,8 +19,7 @@ var asd = fetch(url)
     .then((res) => { return res.json() })
     .then(function(data) { 
             
-        console.log(data.length);
-        version.innerHTML = data.length.toString().replace(/\B(?=(\d{1})+(?!\d))/g, ".");;
+        version.innerHTML = data.length.toString().replace(/\B(?=(\d{1})+(?!\d))/g, ".");
 
     });
 
