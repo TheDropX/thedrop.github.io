@@ -2,6 +2,11 @@
 <head>
 
     <title>TheDrop.</title>
+
+    <script type="text/javascript">
+      var timerStart = Date.now();
+    </script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
@@ -122,10 +127,8 @@
       </div>
     </section>
 
-    <footer class="center box-container primary no-border-radius">
-      <p class="no-margin">
-        Developed by TheDrop.
-      </p>
+    <footer class="center box-container primary no-border-radius" id="footer">
+      <div class="no-margin" style="float: right!important;" id="load"></div>
     </footer>
 
   
@@ -246,6 +249,8 @@
       var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));
       particlesJS.load('bg', jsonUri);
     </script>
-    
+
+    <script src="js/footer.js"></script>
+
 </body>
 </html>
