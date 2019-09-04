@@ -223,3 +223,31 @@
 .discord-usercard .usercard__activity .activity__info .info__game .game__content .game__nd-line,.discord-usercard .usercard__activity .activity__info .info__game .game__content .game__st-line {
     color: hsla(0,0%,100%,.8)
 }
+
+.header__avatar span.dnd {
+    background: #f04747;
+}
+
+.header__avatar span.offline {
+    background: #747f8d;
+}
+
+.header__avatar span.online {
+    background: #43b581;
+}
+
+.header__avatar span.idle {
+    background: #faa61a;
+}
+
+.header__avatar span {
+    z-index: 1;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2c2f33;
+    border-radius: 100%;
+}

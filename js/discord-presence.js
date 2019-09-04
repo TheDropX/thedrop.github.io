@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const game = document.getElementById('game');
 const details = document.getElementById('details');
 const state = document.getElementById('state');
+const status = document.getElementById('status');
 
 const largeImage = document.getElementById('largeImage');
 const smallImage = document.getElementById('smallImage');
@@ -13,6 +14,8 @@ fetch('https://api.thedrop.me/presences/293828021134295040')
 return data.map(function(data) {
 
   username.innerHTML = `${data.userTag}`;
+
+  status.classList.add(data.status);
 
   if(data.game != null) {
 
