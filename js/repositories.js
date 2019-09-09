@@ -13,6 +13,8 @@ function append(parent, el) {
         var repo_div = document.getElementById('repos');
 
         repo.setAttribute('href', `https://github.com/${data.full_name}`);
+        repo_p.setAttribute('data-aos', 'fade-right');
+        repo_p.setAttribute('data-aos-duration', '2000')
 
         if(data.fork == false) {
 
