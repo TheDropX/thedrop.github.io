@@ -13,6 +13,7 @@
     <link href="https://modesta.alexflipnote.dev/css/modesta.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href="css/discord.css" type="text/css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="js/smoothscroll.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a7e58d64e4.js"></script>
@@ -25,7 +26,7 @@
       <div class="center-object">
         <div class="container">
           <section class="me unset">
-            <img draggable="false" src="img/gg.png" class="image-title">
+            <img draggable="false" src="img/gg.png" class="image-title" style="border-color: aqua;">
             <div class="unset"><h1 class="title">TheDrop.</h1></div>
           </section>
           <div class="buttons">
@@ -40,7 +41,7 @@
       <a href="#information"><div id="fade" class="arrow bounce"></div></a>
     </div>
 
-    <section class="container" id="information">
+    <section class="container" data-aos="fade-up" id="information" data-aos="fade-up" data-aos-duration="2000">
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">About me</h1></div>
         <div class="one-full column">
@@ -52,7 +53,9 @@
           </p>
         </div>
       </div>
+    </section>
 
+    <section class="container" data-aos="fade-up" data-aos-duration="2000">
       <div class="box-container row">
         <div class="one-full column">
           <h1 class="emerald-text">Projects</h1>
@@ -63,7 +66,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" data-aos="fade-up" data-aos-duration="2000">
       <div class="box-container row">
         <div class="one-full column"><h1 class="emerald-text">Discord status</h1></div>
         <div class="one-full column">
@@ -117,10 +120,10 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" data-aos="fade-up" data-aos-duration="2000">
       <div class="box-container row">
         <h1 class="emerald-text">Organizations</h1>
-          <div class="one-full column" style="display: flex;" id="orgs">
+          <div class="one-full column" style="display: flex;" id="orgs" data-aos="fade-right" data-aos-duration="2000">
             <script src="js/organizations.js"></script>
           </div>
         </div>
@@ -251,6 +254,9 @@
     </script>
 
     <script src="js/footer.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
