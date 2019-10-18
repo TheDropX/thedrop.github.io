@@ -2697,7 +2697,7 @@ button.youtube {
   background-color: #05cc47;
 }
 .btn.discord, input[type="submit"].discord {
-  background-color: #7289da;
+  background-color: #7289da!important;
   filter: drop-shadow(5px 5px 0 rgba(114, 137, 218, 0.6));
 }
 .btn.discord:hover, input[type="submit"].discord:hover {

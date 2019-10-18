@@ -3,7 +3,7 @@
     border-radius: 8px;
     position: relative;
     width: 550px;
-    background: #7289da
+    background: #7289da!important;
 }
 
 .discord-usercard * {
